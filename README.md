@@ -20,3 +20,11 @@ Help on flags:
 ```
 
 Tested on Apache 2.2 and Apache 2.4.
+
+## Docker Image
+
+```bash
+docker build -t apache_exporter .
+
+docker run -d -p 9117:9117 --name prometheus-apache_exporter apache_exporter
+```
