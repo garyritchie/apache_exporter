@@ -23,8 +23,14 @@ Tested on Apache 2.2 and Apache 2.4.
 
 ## Docker Image
 
+Build
 ```bash
 docker build -t apache_exporter .
 
 docker run -d -p 9117:9117 --name prometheus-apache_exporter apache_exporter
 ```
+or run directly...
+```bash
+docker run -d -p 9117:9117 --net host --name prom-apache_exporter garyritchie/apache_exporter
+```
+
